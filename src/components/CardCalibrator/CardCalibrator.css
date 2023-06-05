@@ -1,0 +1,105 @@
+.cardcalibrator__container {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.cardcalibrator__container--carddesign_color {
+  --color: var(--carddesign_color);
+  top: 8rem;
+}
+.cardcalibrator__container--cardheader_color {
+  --color: var(--cardheader_color);
+  top: 4rem;
+}
+.cardcalibrator__container--small_color {
+  --color: var(--small_color);
+  top: 12.75rem;
+}
+.cardcalibrator__container--button-hover_background-color {
+  --color: var(--button-hover_background-color);
+  top: 24.25rem;
+}
+.cardcalibrator__container--button_background-color {
+  --color: var(--button_background-color);
+  top: 22.5rem;
+}
+.cardcalibrator__container--icon_fill {
+  --color: var(--icon_fill);
+  top: 16rem;
+}
+.cardcalibrator__container--listitem_border {
+  --color: var(--listitem_border);
+  top: 17.25rem;
+}
+.cardcalibrator__container--cardheader_background-color {
+  --color: var(--cardheader_background-color);
+  top: 4rem;
+}
+.cardcalibrator__container--carddesign_background-color {
+  --color: var(--carddesign_background-color);
+  top: 10.5rem;
+}
+
+.cardcalibrator__container--carddesign_color,
+.cardcalibrator__container--cardheader_color,
+.cardcalibrator__container--small_color,
+.cardcalibrator__container--button-hover_background-color,
+.cardcalibrator__container--button_background-color,
+.cardcalibrator__container--icon_fill {
+  left: 3rem;
+}
+
+.cardcalibrator__container--listitem_border,
+.cardcalibrator__container--cardheader_background-color,
+.cardcalibrator__container--carddesign_background-color {
+  right: 3rem;
+}
+
+.cardcalibrator__container--carddesign_color::after,
+.cardcalibrator__container--cardheader_color::after,
+.cardcalibrator__container--small_color::after,
+.cardcalibrator__container--button-hover_background-color::after,
+.cardcalibrator__container--button_background-color::after,
+.cardcalibrator__container--icon_fill::after {
+  content: "";
+  height: 0.0625rem;
+  width: 3.25rem;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+}
+
+.cardcalibrator__container--listitem_border::before,
+.cardcalibrator__container--cardheader_background-color::before {
+  content: "";
+  height: 0.0625rem;
+  width: 3.25rem;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+}
+
+.cardcalibrator__button {
+  background-color: var(--color);
+  color: var(--color);
+  overflow: hidden;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid white;
+  outline: 1px solid black;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cardcalibrator__button:hover {
+  transform: scale(1.25);
+}
+
+.cardcalibrator__button--active {
+  transform: scale(1.25);
+}

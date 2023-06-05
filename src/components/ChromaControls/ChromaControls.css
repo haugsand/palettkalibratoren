@@ -1,0 +1,8 @@
+.chromacontrols {
+  margin-bottom: 3rem;
+}
+
+.chromacontrols__ranges {
+  display: flex;
+  justify-content: space-between;
+}

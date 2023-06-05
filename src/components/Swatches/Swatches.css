@@ -1,0 +1,38 @@
+.swatches {
+  margin-bottom: 3rem;
+}
+
+.swatches__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+}
+
+.swatches__listitem {
+  position: relative;
+}
+
+.swatches__listitem--active::after {
+  display: block;
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0.75rem;
+  bottom: -37px;
+  transform: rotate(45deg);
+  background: white;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.swatches__swatch {
+  height: 3rem;
+  width: 3rem;
+  border: 0;
+}
+
+.swatches__swatch:hover {
+  transform: scale(0.9);
+}

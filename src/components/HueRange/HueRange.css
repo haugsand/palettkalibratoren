@@ -1,0 +1,39 @@
+.huerange {
+  margin-bottom: 3rem;
+}
+
+.huerange__rangecontainer {
+  width: 100%;
+  height: 2rem;
+  margin: 0;
+}
+
+.huerange__range {
+  width: 100%;
+  height: 24px;
+  background-color: transparent;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+.huerange__range::-webkit-slider-thumb {
+  border: 2px solid white;
+  outline: 1px solid black;
+  height: 36px;
+  width: 12px;
+  background-color: hsl(var(--hue) var(--saturation) var(--lightness));
+  -webkit-appearance: none;
+  cursor: move;
+  margin-top: 8px;
+}
+
+.huerange__range::-moz-range-thumb {
+  border: 2px solid white;
+  outline: 1px solid black;
+  height: 36px;
+  width: 12px;
+  background-color: hsl(var(--hue) var(--saturation) var(--lightness));
+  -webkit-appearance: none;
+  cursor: move;
+  margin-top: 8px;
+}

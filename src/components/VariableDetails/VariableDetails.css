@@ -1,0 +1,47 @@
+.variabledetails {
+  margin-top: 3rem;
+}
+
+.variabledetails__palette {
+  display: flex;
+  margin: 0 auto 1rem auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 25rem;
+}
+
+.variabledetails__palette:first-child {
+  margin-bottom: 2rem;
+}
+
+.variabledetails__palettetitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  width: 6rem;
+}
+.variabledetails__paletteswatches {
+  list-style: none;
+  display: flex;
+}
+
+.variabledetails__palettebutton {
+  background-color: var(--color);
+  color: var(--color);
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 2rem;
+  height: 2rem;
+}
+
+.variabledetails__palettebutton:hover {
+  transform: scale(0.9);
+}
+
+.variabledetails__palette--active
+  .variabledetails__paletteswatch--active
+  .variabledetails__palettebutton {
+  transform: scale(1.25);
+}

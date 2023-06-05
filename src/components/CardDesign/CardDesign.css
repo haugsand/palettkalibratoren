@@ -1,0 +1,68 @@
+.carddesign {
+  background-color: var(--carddesign_background-color);
+  color: var(--carddesign_color);
+  padding: 3rem 7.5rem;
+  position: relative;
+}
+
+.carddesign__card {
+  background-color: white;
+  margin: 0 auto 0 auto;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.carddesign__cardheader {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  background-color: var(--cardheader_background-color);
+  color: var(--cardheader_color);
+  padding: 1rem 1.5rem;
+}
+.carddesign__cardbody {
+  padding: 1.5rem;
+}
+
+.carddesign__small {
+  color: var(--small_color);
+}
+
+.carddesign__list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+.carddesign__listitem {
+  border-bottom: thin solid var(--listitem_border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carddesign__icon {
+  fill: var(--icon_fill);
+}
+
+.carddesign__footer {
+  margin-bottom: 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.carddesign__button {
+  background-color: var(--button_background-color);
+  color: white;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+}
+
+.carddesign__button:hover {
+  background-color: var(--button-hover_background-color);
+}
+
+.carddesign__contrast {
+  color: var(--button_background-color);
+}

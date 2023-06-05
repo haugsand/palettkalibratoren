@@ -1,0 +1,31 @@
+.gradientrange {
+  width: 100%;
+  height: 2rem;
+}
+
+.gradientrange__input {
+  width: 100%;
+  height: 2rem;
+  background-color: transparent;
+  -webkit-appearance: none;
+  margin-left: -2px;
+  display: block;
+}
+
+.gradientrange__input::-webkit-slider-thumb {
+  border: 2px solid white;
+  outline: 1px solid black;
+  height: 36px;
+  width: 12px;
+  -webkit-appearance: none;
+  cursor: move;
+}
+
+.gradientrange__input::-moz-range-thumb {
+  border: 2px solid white;
+  outline: 1px solid black;
+  height: 36px;
+  width: 12px;
+  -webkit-appearance: none;
+  cursor: move;
+}

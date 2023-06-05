@@ -1,0 +1,40 @@
+.choosepalette {
+  margin-bottom: 3rem;
+}
+
+.choosepalette__radio {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.choosepalette__swatches {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.choosepalette__radio:checked + .choosepalette__swatch {
+  outline: 2px solid black;
+}
+
+.choosepalette__swatch {
+  background-color: var(--color);
+  color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid white;
+}
+
+.choosepalette__swatch:hover {
+  outline: 2px solid var(--color);
+}

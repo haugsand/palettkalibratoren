@@ -1,0 +1,18 @@
+.colordetails {
+  margin-bottom: 3rem;
+  margin-top: -1.5rem;
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+.colordetails__contrast {
+  margin: 1.5rem 0 0 0;
+  color: var(--color);
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
