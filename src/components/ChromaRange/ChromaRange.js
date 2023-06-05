@@ -1,6 +1,14 @@
 import "./ChromaRange.css";
 
-function ChromaRange({ value, setValue }) {
+function ChromaRange({ value, setValue, activePalette, property }) {
+
+  function changeValue(value) {
+    const key = activePalette + "_" + property;
+    localStorage.setItem(key, value);
+
+    setValue(value)
+  }
+
   return (
     <div class="chromarange">
       <input
@@ -11,7 +19,7 @@ function ChromaRange({ value, setValue }) {
         orient="vertical"
         class="chromarange__range"
         value={value}
-        onInput={(e) => setValue(Number(e.target.value))}
+        onInput={(e) => changeValue(Number(e.target.value))}
       />
     </div>
   );

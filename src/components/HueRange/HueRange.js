@@ -3,7 +3,15 @@ import { clampChroma, formatHex } from "culori";
 
 import "./HueRange.css";
 
-function HueRange({ value, setValue, chroma }) {
+function HueRange({ value, setValue, chroma, activePalette }) {
+
+  function changeValue(value) {
+    const key = activePalette + "_" + 'hue';
+    localStorage.setItem(key, value);
+
+    setValue(value)
+  }
+
   const LIGHTNESS = 0.567;
 
   const gradient = [];
@@ -33,7 +41,7 @@ function HueRange({ value, setValue, chroma }) {
           max="359"
           step="1"
           value={value}
-          onInput={(e) => setValue(e.target.value)}
+          onInput={(e) => changeValue(e.target.value)}
         />
       </p>
     </section>
