@@ -18,18 +18,6 @@ import Gradientbar from "../Gradientbar";
 import HueRange from "../HueRange";
 import Swatches from "../Swatches";
 
-function initState(gradientId, property, defaultValue) {
-  const key = gradientId + "_" + property;
-
-  if (localStorage[key]) {
-    console.log('stored: ' + localStorage[key])
-    return localStorage[key];
-  } else {
-    localStorage.setItem(key, defaultValue);
-    return defaultValue;
-  }
-}
-
 function App() {
   // Oppsett av verktøy
   const [activePalette, setActivePalette] = useState(1);
@@ -47,11 +35,15 @@ function App() {
     oklchValues[n] = {};
     set_oklchValues[n] = {};
 
-    ["hue", "low", "lowcenter", "center", "centerhigh", "high"].forEach(property => {
-      [oklchValues[n][property], set_oklchValues[n][property]] = useState(
-        localStorage[n + "_" + property] ? localStorage[n + "_" + property] : DEFAULT_OKLCH[n][property]
-      );
-    })
+    ["hue", "low", "lowcenter", "center", "centerhigh", "high"].forEach(
+      (property) => {
+        [oklchValues[n][property], set_oklchValues[n][property]] = useState(
+          localStorage[n + "_" + property]
+            ? Number(localStorage[n + "_" + property])
+            : DEFAULT_OKLCH[n][property]
+        );
+      }
+    );
 
     gradient[n] = interpolateColors(getColorsFromState(oklchValues[n]), 99);
   });
@@ -67,7 +59,9 @@ function App() {
 
     STEPS.forEach((step) => {
       [palette[n][step], set_palette[n][step]] = useState(
-        localStorage[n + "_" + step] ? localStorage[n + "_" + step] : DEFAULT_PALETTE[n][step]
+        localStorage[n + "_" + step]
+          ? localStorage[n + "_" + step]
+          : DEFAULT_PALETTE[n][step]
       );
     });
   });
@@ -89,20 +83,20 @@ function App() {
           activePalette={activePalette}
           gradient={gradient}
           chroma={oklchValues[activePalette]["center"]}
-          />
+        />
 
         <ChromaControls
           values={oklchValues[activePalette]}
           setValues={set_oklchValues[activePalette]}
           activePalette={activePalette}
-          />
+        />
 
         <Swatches
           gradient={gradient[activePalette]}
           palette={palette[activePalette]}
           activeColor={activeColor}
           setActiveColor={setActiveColor}
-          />
+        />
         {activeColor && (
           <ColorDetails
             activePalette={activePalette}

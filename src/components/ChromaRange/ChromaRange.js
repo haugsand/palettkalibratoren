@@ -3,10 +3,10 @@ import "./ChromaRange.css";
 function ChromaRange({ value, setValue, activePalette, property }) {
 
   function changeValue(value) {
+    setValue(value)
     const key = activePalette + "_" + property;
     localStorage.setItem(key, value);
 
-    setValue(value)
   }
 
   return (
