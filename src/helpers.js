@@ -117,8 +117,6 @@ export function getColorsFromState(state) {
     },
   ];
 
-  console.log(colors)
-
   return colors;
 }
 

@@ -13,6 +13,7 @@ import CardContainer from "../CardContainer";
 import ChoosePalette from "../ChoosePalette";
 import ChromaControls from "../ChromaControls";
 import ColorDetails from "../ColorDetails";
+import ColorDetailsPlaceholder from "../ColorDetailsPlaceholder";
 import CopyButtons from "../CopyButtons";
 import Gradientbar from "../Gradientbar";
 import HueRange from "../HueRange";
@@ -97,7 +98,7 @@ function App() {
           activeColor={activeColor}
           setActiveColor={setActiveColor}
         />
-        {activeColor && (
+        {activeColor ? (
           <ColorDetails
             activePalette={activePalette}
             gradient={gradient[activePalette]}
@@ -106,6 +107,8 @@ function App() {
             color={gradient[activePalette][palette[activePalette][activeColor]]}
             step={activeColor}
           />
+        ) : (
+          <ColorDetailsPlaceholder />
         )}
 
         <CopyButtons

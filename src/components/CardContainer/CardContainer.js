@@ -4,6 +4,7 @@ import { useState } from "preact/hooks";
 import CardCalibrator from "../CardCalibrator";
 import CardDesign from "../CardDesign";
 import VariableDetails from "../VariableDetails";
+import VariableDetailsPlaceholder from "../VariableDetailsPlaceholder";
 
 function CardContainer({
   activeVariable,
@@ -88,7 +89,7 @@ function CardContainer({
         activeVariable={activeVariable}
         setActiveVariable={setActiveVariable}
       />
-      {activeVariable && (
+      {activeVariable ? (
         <VariableDetails
           palette={palette}
           gradient={gradient}
@@ -97,6 +98,8 @@ function CardContainer({
           activeVariable={activeVariable}
           activePalette={activePalette}
         />
+      ) : (
+        <VariableDetailsPlaceholder />
       )}
     </div>
   );
