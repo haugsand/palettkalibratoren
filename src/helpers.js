@@ -105,13 +105,13 @@ export function getColorsFromState(state) {
     },
     {
       mode: "oklch",
-      l: 0.404,
+      l: 0.384,
       c: state.centerhigh,
       h: state.hue,
     },
     {
       mode: "oklch",
-      l: 0.24,
+      l: 0.200,
       c: state.high,
       h: state.hue,
     },

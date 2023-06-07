@@ -11,7 +11,7 @@ function CardDesign({}) {
             Her er eksempel på en tekst som strekker seg ikke bare over én, men over to linjer.
           </p>
           <p class="carddesign__small">
-            Dette er en tekst som er litt mindre i fokus.
+            Dette er en tekst med en annen tekstfarge.
           </p>
           <ul class="carddesign__list">
             <li class="carddesign__listitem">
